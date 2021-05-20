@@ -2,7 +2,7 @@
   <div>
     <div class="nav-bar"></div>
     <div class="cart">
-      <p>Cart({{ cart.length }})</p>
+      <p>Cart ({{ cart.length }})</p>
     </div>
     <product :premium="premium" @add-to-cart="updateCart"></product>
   </div>

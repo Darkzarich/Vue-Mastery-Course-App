@@ -1,5 +1,5 @@
 <template>
-  <form class="review-form" @submit.prevent="onSubmit">
+  <form data-cy="review-form" class="review-form" @submit.prevent="onSubmit">
 
     <p>
       <label for="name">Name:</label>

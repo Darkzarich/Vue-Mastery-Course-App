@@ -1,7 +1,7 @@
 <template>
   <div class="product">
 
-    <div class="product-image">
+    <div class="product-image" data-cy="product-picture">
       <img :src="image" />
     </div>
 
@@ -21,6 +21,7 @@
       </div>
 
       <button v-on:click="addToCart"
+              data-cy="add-to-cart"
               :disabled="!inStock"
               :class="{ disabledButton: !inStock }"
       >

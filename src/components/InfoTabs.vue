@@ -1,13 +1,14 @@
 <template>
   <div>
-
     <ul>
-          <span class="tabs"
-                :class="{ activeTab: selectedTab === tab }"
-                v-for="tab in tabs"
-                @click="selectedTab = tab"
-                :key="tab"
-          >{{ tab }}</span>
+      <span
+        class="tabs"
+        :class="{ activeTab: selectedTab === tab }"
+        v-for="tab in tabs"
+        @click="selectedTab = tab"
+        :key="tab"
+        >{{ tab }}</span
+      >
     </ul>
 
     <div v-show="selectedTab === 'Shipping'">
@@ -16,10 +17,15 @@
 
     <div v-show="selectedTab === 'Details'">
       <ul>
-        <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
+        <li
+          v-for="(detail, index) in details"
+          :key="index"
+          data-cy="product-details-item"
+        >
+          {{ detail }}
+        </li>
       </ul>
     </div>
-
   </div>
 </template>
 
@@ -46,13 +52,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .tabs {
-    margin-left: 20px;
-    cursor: pointer;
-  }
+.tabs {
+  margin-left: 20px;
+  cursor: pointer;
+}
 
-  .activeTab {
-    color: #16C0B0;
-    text-decoration: underline;
-  }
+.activeTab {
+  color: #16c0b0;
+  text-decoration: underline;
+}
 </style>
